@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create post</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/style/createPost.css"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="sub-head">
+        <a class="head-links" href="http://localhost:8181/" method="GET">
+          <div>Forum</div>
+        </a>
+      </div>
+      <div class="d-flex">
+        <div class="sub-head m-r-0">
+          <a class="head-links" href="/users/profile" method="GET">
+            <div>My Profile</div>
+          </a>
+        </div>
+        <div class="sub-head">
+          <form action="/auth/logout" method="POST">
+            <button class="logOut" type="submit">Log Out</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="new-post">
+        <h1>Create new Post</h1>
+        <form action="/posts/" method="POST">
+          <div>
+            <h2>Title</h2>
+            <input
+              required
+              type="text"
+              id="title"
+              name="title"
+              value=""
+              placeholder="title..."
+            />
+          </div>
+          <div>
+            <h2>Article</h2>
+            <textarea
+              required
+              rows="30"
+              type="text"
+              id="body"
+              name="body"
+              value=""
+              placeholder="some text..."
+            ></textarea>
+          </div>
+          <div>
+            <input
+              required
+              type="text"
+              id="category"
+              name="categories"
+              value=""
+              placeholder="category"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              id="category"
+              name="categories"
+              value=""
+              placeholder="category"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              id="category"
+              name="categories"
+              value=""
+              placeholder="category"
+            />
+          </div>
+          <div class="publish">
+            <button type="submit" value="Publish">Publish</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

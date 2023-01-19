@@ -1,0 +1,366 @@
+html {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(241, 241, 241);
+    max-width: 1655px;
+    font-family: 'Roboto Mono', monospace;
+}
+body {
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  background-color: rgb(241, 241, 241);
+  width: 100%;
+  height: 100vh;
+}
+a{
+  color: black;
+  text-decoration: none;  
+}
+a:visited 
+{
+  color: black;
+  text-decoration: none;
+}
+.errorText{
+    text-align: center;
+    font-size: 200%;
+  }
+  .upside{
+    text-align: center;
+    background-color: rgb(164, 222, 255);
+}
+.upsideText{
+  background-color: rgb(102, 198, 253);
+  font-size: 300%;
+  }
+.errgif{
+  width: 480px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+footer{
+  text-align: center;
+  background-color: rgb(102, 198, 253);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+}
+.searchbar{
+  display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+.searchbar input {
+  width: 400px;
+  padding: 6px;
+  border-color: rgb(102, 198, 253);
+  font-size: 17px;
+}
+.searchbar button {
+  /* margin-top: 8px; */
+  background: rgb(250, 250, 250);
+  border-color: rgb(102, 198, 253);
+  cursor: pointer;
+}
+.searchbar img {
+  width: 24px;
+}
+
+.collapsible {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(164, 222, 255);
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 700px;
+  max-width: 700px;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 17px;
+}
+
+.active, .collapsible:hover {
+  background-color: rgb(102, 198, 253);
+}
+
+.filterContent {
+  display: none;
+  overflow: hidden;
+  background-color: rgb(164, 222, 255);
+  max-width: 700px;
+  margin: auto;
+}
+#filter {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(164, 222, 255);
+  border-radius: 5px;
+  padding: 2em;
+  max-width: 700px;
+  padding: auto;
+  margin: auto;
+}
+
+.filterField {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
+
+.firsAlbumInp {
+  height: 30px;
+  width: 160px;
+}
+.membersInp {
+  height: 20px;
+  width: 30px;
+}
+input {
+  accent-color: rgb(30, 172, 255);
+}
+input:focus {
+    background-color: rgb(30, 172, 255);
+    color: black;
+    outline: none;
+}
+
+#locationInp {
+  height: 30px;
+  width: 370px;
+}
+#filterBtn {
+border: 1px solid rgb(141, 221, 245);
+color: black;
+  height: 36px;
+  width: 60px;
+}
+#filterBtn:hover {
+  background-color: rgb(102, 198, 253);;
+}
+
+@media screen and (max-width: 800px) {
+
+
+.collapsible {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(164, 222, 255);
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 500px;
+  max-width: 500px;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 14px;
+}
+
+.active, .collapsible:hover {
+  background-color: rgb(102, 198, 253);
+}
+
+.filterContent {
+  display: none;
+  overflow: hidden;
+  background-color: rgb(164, 222, 255);
+  max-width: 500px;
+  margin: auto;
+}
+#filter {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(164, 222, 255);
+  border-radius: 5px;
+  padding: 2em;
+  max-width: 500px;
+  padding: auto;
+  margin: auto;
+}
+
+.filterField {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  font-size: 14px;
+}
+
+.creationInp {
+  height: 25px;
+  width: 100px;
+  font-size: 10px;
+}
+.firsAlbumInp {
+  height: 25px;
+  width: 100px;
+}
+.membersInp {
+  height: 15px;
+  width: 20px;
+}
+input {
+  accent-color: rgb(30, 172, 255);
+  font-size: 10px;
+}
+input:focus {
+    background-color: rgb(30, 172, 255);
+    color: black;
+    outline: none;
+}
+
+#locationInp {
+  height: 25px;
+  width: 250px;
+}
+#filterBtn {
+border: 1px solid rgb(141, 221, 245);
+color: black;
+  height: 32px;
+  width: 40px;
+}
+#filterBtn:hover {
+  background-color: rgb(102, 198, 253);;
+}
+}
+@media screen and (max-width: 600px) {
+  .errorText{
+    text-align: center;
+    font-size: 100%;
+  }
+.upsideText{
+  background-color: rgb(102, 198, 253);
+  font-size: 150%;
+  }
+.errgif{
+  width: 320px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+footer{
+  font-size: 60%;
+  text-align: center;
+  background-color: rgb(102, 198, 253);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 12px;
+}
+.searchbar{
+  display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+.searchbar input {
+  width: 200px;
+  height: 15px;
+  padding: 2px;
+  border-color: rgb(102, 198, 253);
+  font-size: 10px;
+}
+.searchbar button {
+  /* margin-top: 8px; */
+  background: rgb(250, 250, 250);
+  border-color: rgb(102, 198, 253);
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+}
+.searchbar img {
+  width: 13px;
+}
+
+.collapsible {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(164, 222, 255);
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 400px;
+  max-width: 400px;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 14px;
+}
+
+.active, .collapsible:hover {
+  background-color: rgb(102, 198, 253);
+}
+
+.filterContent {
+  display: none;
+  overflow: hidden;
+  background-color: rgb(164, 222, 255);
+  max-width: 400px;
+  margin: auto;
+}
+#filter {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(164, 222, 255);
+  border-radius: 5px;
+  padding: 2em;
+  max-width: 400px;
+  padding: auto;
+  margin: auto;
+}
+
+.filterField {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  font-size: 12px;
+}
+
+.creationInp {
+  height: 25px;
+  width: 100px;
+  font-size: 10px;
+}
+.firsAlbumInp {
+  height: 25px;
+  width: 70px;
+  font-size: 7px;
+}
+.membersInp {
+  height: 15px;
+  width: 12px;
+}
+input {
+  accent-color: rgb(30, 172, 255);
+  font-size: 10px;
+}
+input:focus {
+    background-color: rgb(30, 172, 255);
+    color: black;
+    outline: none;
+}
+
+#locationInp {
+  height: 20px;
+  width: 170px;
+}
+#filterBtn {
+border: 1px solid rgb(141, 221, 245);
+color: black;
+  height: 26px;
+  width: 30px;
+}
+#filterBtn:hover {
+  background-color: rgb(102, 198, 253);;
+}
+}

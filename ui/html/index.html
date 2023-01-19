@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../static/style/index.css">
+    <title>Posts</title>
+  </head>
+
+  <body>
+    {{ $auth := .Username}}
+    <div class="header">
+      <div class="sub-head">
+        <a class="head-links" href="http://localhost:8181/" method="GET">
+          <div>Forum</div>
+        </a>
+      </div>
+      <div class="group-sub-head">
+        {{if $auth}}
+        <div class="group-sub-head">
+          <div class="sub-head">
+            <a class="head-links" href="/users/profile" method="GET">
+              <div>My Profile</div>
+            </a>
+          </div>
+          <div class="sub-head">
+            <a class="head-links" href="/posts/" method="GET">
+              <div>Create Post</div>
+            </a>
+          </div>
+          <div class="sub-head">
+            <form action="/auth/logout" method="POST">
+              <button class="logOut" type="submit">
+                <div>Log Out</div>
+                </button>
+            </form>
+          </div>
+        </div>
+        {{else}}
+        <div class="group-sub-head">
+          <div class="sub-head">
+            <a class="head-links" href="/auth/signin" method="GET">
+              <div>Sign In</div>
+            </a>
+          </div>
+          <div class="sub-head">
+            <a class="head-links" href="/auth/signup" method="GET">
+              <div>Sign Up</div>
+            </a>
+          </div>
+        </div>
+        {{end}}
+      </div>
+    </div>
+    <div class="content">
+      <div class="posts">
+        {{range .Posts}}
+        <div class="post">
+          <div class="post-author">
+            <div>
+              <span class="sub-title">Author:</span>
+              {{if $auth}}
+              <a href="/users/profile?username={{ .Creator}}" method="GET">
+                <span class>{{.Creator}}</span>
+              </a>
+              {{else}}
+              <span class>{{.Creator}}</span>
+              {{end}}
+            </div>
+            <div>
+              <span class="sub-title">Creation date:</span>  
+              <span style="font-size: 18px">{{.CreationDateFront}}</span>
+            </div>
+          </div>
+          <div class="post-title">
+            <a href="/posts/?post_id={{ .ID}}" method="GET">
+              <h1>{{.Title}}</h1>
+            </a>
+          </div>
+          <div class="read-post">
+            <div class="post-categories">
+              <div>
+                <span class="sub-title">Categories:</span>
+              </div>
+              {{range .Categories}}
+              <div class="each-category">
+                  <a
+                    href="http://localhost:8181/posts?category={{.}}"
+                    method="GET"
+                  >
+                    <div class="each-category">
+                      <span>{{.}}</span>
+                    </div>
+                  </a>
+              </div>
+              {{end}}
+            </div>
+            <div>
+              <a href="/posts/?post_id={{ .ID}}" method="GET">
+                <button class="btn-read">
+                  Read
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="post-likes-comments">
+            <div class="post-likes sub-title">
+              <img class="m-r-7" src="../static/media/like.svg">
+              <span> {{.LikesCount}}</span>
+            </div>
+            <div class="post-dislikes">
+              <img class="dislike m-r-7" src="../static/media/dislike.svg">
+              <span>{{.DislikesCount}}</span>
+            </div>
+            <div class="post-comments">comments: {{.CommentsCount}}</div>
+          </div>
+        </div>
+        {{end}}
+      </div>
+      <div>
+      </div>
+  </body>
+</html>

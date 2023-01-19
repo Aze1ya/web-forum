@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/style/userProfile.css"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="sub-head">
+        <a class="head-links" href="http://localhost:8181/" method="GET">
+          <div>Forum</div>
+        </a>
+      </div>
+      <div class="group-sub-head" id="isAuth">
+        <div class="group-sub-head">
+          <div class="sub-head">
+            <a class="head-links" href="/users/profile" method="GET">
+              <div>My Profile</div>
+            </a>
+          </div>
+          <div class="sub-head">
+            <a class="head-links" href="/posts/" method="GET">
+              <div>Create Post</div>
+            </a>
+          </div>
+          <div class="sub-head">
+            <form action="/auth/logout" method="POST">
+              <button class="logOut" type="submit">
+                <div>Log Out</div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="info">
+        <h1>{{.User.Username}}</h1>
+        <div class="filter">
+          <div class="btns">
+            <a href="/users/profile?username={{.User.Username}}" method="GET">
+              <button class="firstChild btn-active">Profile info</button>
+            </a>
+            <a href="/users/posts?username={{.User.Username}}" method="GET">
+              <button>Posts</button>
+            </a>
+            <a href="/users/comments?username={{.User.Username}}" method="GET">
+              <button>Comments</button>
+            </a>
+            <a href="/users/likes?username={{.User.Username}}" method="GET">
+              <button>Liked post</button>
+            </a>
+            <a href="/users/dislikes?username={{.User.Username}}" method="GET">
+              <button class="lastChild">Disliked post</button>
+            </a>
+          </div>
+        </div>
+        <div>
+          <span class="sub-title">Email: </span>
+          <span>{{ .User.Email}}</span>
+        </div>
+        <div>
+          <span class="sub-title">Registered: </span>
+          <span>{{ .User.CreationDateFront}}</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../static/style/signStyle.css">
+    <title>SignUp</title>
+  </head>
+  <body>
+      <div class="header">
+        <div class="sub-head">
+          <a class="head-links" href="http://localhost:8181/" method="GET">
+            <div>Forum</div>
+          </a>
+        </div>
+
+        <div class="sub-head">
+          <a class="head-links" href="/auth/signin" method="GET">
+            <div>Sign In</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="login">
+          <div class="title">
+            <p>Enter username and password</p>
+          </div>
+          <div class="form">
+            <form action="/auth/signup" method="POST">
+              <div>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value=""
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div>
+                <input required type="text" id="uname" name="username" placeholder="Username" value="" />
+              </div>
+              <div>
+                <input required type="password" id="upass" name="password" placeholder="Password" value="" />
+              </div>
+              <div>
+                <input
+                  type="password"
+                  id="upass"
+                  name="passwordRepeat"
+                  placeholder="Verify password"
+                  value=""
+                  required
+                />
+              </div>
+              <div>
+                <button type="submit" value="sign up">Sign Up</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
